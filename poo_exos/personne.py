@@ -18,7 +18,7 @@ class Travailleur(Personne):
     def __str__(self):
         return (f"{super().__str__()}, Entreprise: {self.nom_entreprise}, Adresse Entreprise: {self.adresse_entreprise}, Tel Pro: {self.tel_pro}")
     
-class Etudiant(Travailleur):
+class Scientifique(Travailleur):
     def __init__(self, nom, prenom, numero_tel, email, nom_entreprise, adresse_entreprise, tel_pro, disciplines, types_scientifiques):
         super().__init__(nom, prenom, numero_tel, email, nom_entreprise, adresse_entreprise, tel_pro)
         self.disciplines = disciplines
@@ -27,5 +27,5 @@ class Etudiant(Travailleur):
     def __str__(self):
         return (f"{super().__str__()}, Disciplines: {self.disciplines}, Types Scientifiques: {self.types_scientifiques}")
 
-etu1 = Etudiant("Morty", "Rick", "123456789", "<morty@gmail.com>", "Universite", "Paris 5", "987654321", ["Math", "Physique"], ["Theorique", "Experimentale"])
+etu1 = Scientifique("Morty", "Rick", "123456789", "<morty@gmail.com>", "Universite", "Paris 5", "987654321", ["Math", "Physique"], ["Theorique", "Experimentale"])
 print(etu1)
