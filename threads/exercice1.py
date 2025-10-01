@@ -15,9 +15,10 @@ def treat_file(filename):
 threads = []
 
 for filename in all_files:
-    t = Thread(target=treat_file, args=(filename,), name=f"Treating file {filename}")
-    t.start()
-    threads.append(t)
+    if os.path.isfile(filename):
+        t = Thread(target=treat_file, args=(filename,), name=f"Treating file {filename}")
+        t.start()
+        threads.append(t)
 
 # Waiting for all threads to complete before ending main program 
 for t in threads:
