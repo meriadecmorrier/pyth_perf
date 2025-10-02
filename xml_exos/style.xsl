@@ -11,7 +11,7 @@
 
     <!-- template pour chaque livre -->
     <xsl:template match="livre">
-        <livre annee="{@annee_parution}" genre="{@genre}">
+        <livre annee="{annee_parution}" genre="{genre}">
             <xsl:value-of select="titre"/> - <xsl:value-of select="auteur"/>
         </livre>
     </xsl:template>
